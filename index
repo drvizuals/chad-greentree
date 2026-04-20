@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -233,11 +234,11 @@ nav {
 .csm-text strong { color: var(--ink); font-weight: 600; }
 
 /* ── FLYWHEEL ──────────────────────────────────── */
-.fw-section { background: var(--green); padding: 7rem 3rem; }
-.fw-section .eyebrow { color: var(--mist); }
-.fw-section .eyebrow::before { background: var(--mist); }
+.fw-section { background: var(--ink); padding: 7rem 3rem; }
+.fw-section .eyebrow { color: var(--sage); }
+.fw-section .eyebrow::before { background: var(--sage); }
 .fw-section .sh { color: #fff; }
-.fw-section .sh em { color: var(--mist); }
+.fw-section .sh em { color: var(--sage); }
 .fw-sub {
   font-size: 1rem; font-weight: 300;
   line-height: 1.78; color: rgba(255,255,255,.55);
@@ -246,30 +247,35 @@ nav {
 
 .fw-grid {
   display: grid; grid-template-columns: repeat(4,1fr);
-  gap: 1px; margin-top: 4rem;
-  background: rgba(255,255,255,.1);
-  border-radius: 12px; overflow: hidden;
+  gap: 2px; margin-top: 4rem;
+  background: rgba(255,255,255,.06);
+  border-radius: 16px; overflow: hidden;
 }
 .fw-cell {
-  background: rgba(255,255,255,.04);
-  padding: 2.2rem 1.8rem;
+  background: rgba(255,255,255,.03);
+  padding: 2.5rem 2rem;
   transition: background .3s;
   cursor: default;
+  border-bottom: 2px solid transparent;
+  transition: all .3s;
 }
-.fw-cell:hover { background: rgba(255,255,255,.1); }
+.fw-cell:hover {
+  background: rgba(26,92,40,.3);
+  border-bottom-color: var(--sage);
+}
 .fw-num {
   font-family: 'Fraunces', serif;
-  font-size: 2.5rem; font-weight: 200;
-  color: rgba(255,255,255,.15); line-height: 1;
-  margin-bottom: .8rem;
+  font-size: 3rem; font-weight: 200;
+  color: rgba(90,175,114,.25); line-height: 1;
+  margin-bottom: .9rem;
 }
 .fw-title {
-  font-size: .82rem; font-weight: 600;
-  color: var(--mist); margin-bottom: .55rem;
+  font-size: .9rem; font-weight: 600;
+  color: #fff; margin-bottom: .6rem;
   letter-spacing: .02em;
 }
 .fw-desc {
-  font-size: .82rem; font-weight: 300;
+  font-size: .83rem; font-weight: 300;
   line-height: 1.65; color: rgba(255,255,255,.45);
 }
 
@@ -292,17 +298,17 @@ nav {
 
 .fw-pull {
   margin-top: 3.5rem;
-  padding: 2.2rem 2.5rem;
-  background: rgba(255,255,255,.06);
-  border-left: 3px solid var(--mist);
-  border-radius: 0 8px 8px 0;
+  padding: 2.5rem 2.8rem;
+  background: rgba(26,92,40,.2);
+  border-left: 4px solid var(--sage);
+  border-radius: 0 12px 12px 0;
 }
 .fw-pull p {
   font-family: 'Fraunces', serif;
-  font-size: 1.3rem; font-style: italic; font-weight: 300;
-  line-height: 1.65; color: rgba(255,255,255,.7);
+  font-size: 1.4rem; font-style: italic; font-weight: 300;
+  line-height: 1.65; color: rgba(255,255,255,.8);
 }
-.fw-pull p em { color: var(--mist); font-style: normal; font-weight: 500; }
+.fw-pull p em { color: var(--sage); font-style: normal; font-weight: 500; }
 
 /* ── BUILD ─────────────────────────────────────── */
 .build-grid {
@@ -769,10 +775,12 @@ tr:nth-child(even) td { background: var(--off); }
   .web-opt { flex-direction: column; }
 }
 </style>
+
 </head>
 <body>
 
 <!-- NAV -->
+
 <nav>
   <div class="nav-brand">Green<em>Tree</em> × DR&amp;AV</div>
   <ul class="nav-links">
@@ -787,6 +795,7 @@ tr:nth-child(even) td { background: var(--off); }
 <!-- ════════════════════════════════════════════
      HERO
 ════════════════════════════════════════════ -->
+
 <section class="hero">
   <div class="hero-bg-circle hbc1"></div>
   <div class="hero-bg-circle hbc2"></div>
@@ -806,13 +815,12 @@ tr:nth-child(even) td { background: var(--off); }
     <div class="chip"><div class="chip-dot"></div>12 Short-Form Videos / Month</div>
     <div class="chip"><div class="chip-dot"></div>Monthly Photography</div>
     <div class="chip"><div class="chip-dot"></div>Custom AI — Built for GreenTree</div>
-    <div class="chip"><div class="chip-dot"></div>Website Optimization</div>
     <div class="chip"><div class="chip-dot"></div>10 Trucks. Full Schedule.</div>
   </div>
 
   <div class="hero-stats">
     <div>
-      <div class="hs-n">600<em>+</em></div>
+      <div class="hs-n">1,000<em>+</em></div>
       <div class="hs-l">5-star reviews</div>
     </div>
     <div>
@@ -824,7 +832,7 @@ tr:nth-child(even) td { background: var(--off); }
       <div class="hs-l">shorts per month</div>
     </div>
     <div>
-      <div class="hs-n">$20<em>K</em></div>
+      <div class="hs-n">$12<em>K</em></div>
       <div class="hs-l">avg install value</div>
     </div>
   </div>
@@ -833,54 +841,59 @@ tr:nth-child(even) td { background: var(--off); }
 <!-- ════════════════════════════════════════════
      SITUATION
 ════════════════════════════════════════════ -->
+
 <section class="section off" id="situation">
   <div class="eyebrow reveal">01 — The Situation</div>
   <h2 class="sh reveal">What you've built is strong.<br><em>Here's what's missing.</em></h2>
 
   <div class="sit-grid">
     <div class="sit-body reveal">
-      <p>GreenTree has been in the game since 2015. You've earned 600+ five-star Google reviews, built a fleet of 10 trucks, hold a Trane Comfort Specialist certification, and you're running one of the most premium HVAC operations in Pompano Beach. <strong>That foundation is real.</strong></p>
-      <p>But the schedule isn't as full as those 10 trucks deserve. Leads come in after hours and go unanswered. Nine years of customer data sits in HouseCall Pro untouched. And the $7–13K going out every month to tools and ads isn't all working together toward the same thing.</p>
+      <p>GreenTree has been in the game since 2015. You've earned 1,000+ five-star Google reviews, built a fleet of 10 trucks, hold a Trane Comfort Specialist certification, and you're running one of the most premium HVAC operations in Pompano Beach. <strong>That foundation is real.</strong></p>
+      <p>But the schedule isn't as full as those 10 trucks deserve. Leads come in after hours and go unanswered. Nine years of customer data sits in HouseCall Pro untouched. And the <strong>$2,170/month</strong> going out to Podium, Zyratalk, SearchKings, and HCP isn't all working together toward the same thing.</p>
       <p>The infrastructure for a $4M+ company already exists inside GreenTree. <strong>The warehouse is paid. The trucks are ready. The team is there.</strong> What's missing is a system that feeds the machine every single day — consistently, automatically, without you in the middle of it.</p>
       <p>That's what we're here to build.</p>
     </div>
 
-    <div class="cards reveal">
-      <div class="card-sm good">
-        <div class="csm-ico">⭐</div>
-        <div><div class="csm-label">Working for you</div><div class="csm-text"><strong>600+ five-star Google reviews.</strong> Most competitors have 50–200. This is a real competitive moat that both homeowners and buyers notice.</div></div>
-      </div>
-      <div class="card-sm good">
-        <div class="csm-ico">🚛</div>
-        <div><div class="csm-label">Working for you</div><div class="csm-text"><strong>10 trucks + warehouse infrastructure.</strong> Already built for a $4M+ company. Overhead is fixed — every extra job dispatched is near-pure margin.</div></div>
-      </div>
-      <div class="card-sm good">
-        <div class="csm-ico">🏆</div>
-        <div><div class="csm-label">Working for you</div><div class="csm-text"><strong>Trane Comfort Specialist.</strong> Premium brand partner that supports $20K installs and attracts exactly the right clientele.</div></div>
-      </div>
-      <div class="card-sm gap">
-        <div class="csm-ico">📹</div>
-        <div><div class="csm-label">Gap to close</div><div class="csm-text"><strong>No video content or photography.</strong> Nobody sees the trucks, the team, or the quality of the work before they call. The brand story isn't being told.</div></div>
-      </div>
-      <div class="card-sm gap">
-        <div class="csm-ico">🤖</div>
-        <div><div class="csm-label">Gap to close</div><div class="csm-text"><strong>Leads falling through after hours.</strong> No follow-up sequences, no reactivation of past customers, no system running while the crew sleeps.</div></div>
-      </div>
-      <div class="card-sm gap">
-        <div class="csm-ico">🔄</div>
-        <div><div class="csm-label">Gap to close</div><div class="csm-text"><strong>Zero recurring revenue.</strong> Every job is a one-time transaction. No maintenance plan converting completed installs into monthly income.</div></div>
-      </div>
-    </div>
+```
+<div class="cards reveal">
+  <div class="card-sm good">
+    <div class="csm-ico">⭐</div>
+    <div><div class="csm-label">Working for you</div><div class="csm-text"><strong>1,000+ five-star Google reviews.</strong> Most competitors have 50–200. This is a real competitive moat that both homeowners and buyers notice.</div></div>
+  </div>
+  <div class="card-sm good">
+    <div class="csm-ico">🚛</div>
+    <div><div class="csm-label">Working for you</div><div class="csm-text"><strong>10 trucks + warehouse infrastructure.</strong> Already built for a $4M+ company. Overhead is fixed — every extra job dispatched is near-pure margin.</div></div>
+  </div>
+  <div class="card-sm good">
+    <div class="csm-ico">🏆</div>
+    <div><div class="csm-label">Working for you</div><div class="csm-text"><strong>Trane Comfort Specialist.</strong> Premium brand partner that supports $12K installs and attracts exactly the right clientele.</div></div>
+  </div>
+  <div class="card-sm gap">
+    <div class="csm-ico">📹</div>
+    <div><div class="csm-label">Gap to close</div><div class="csm-text"><strong>No video content or photography.</strong> Nobody sees the trucks, the team, or the quality of the work before they call. The brand story isn't being told.</div></div>
+  </div>
+  <div class="card-sm gap">
+    <div class="csm-ico">🤖</div>
+    <div><div class="csm-label">Gap to close</div><div class="csm-text"><strong>Leads falling through after hours.</strong> No follow-up sequences, no reactivation of past customers, no system running while the crew sleeps.</div></div>
+  </div>
+  <div class="card-sm gap">
+    <div class="csm-ico">🔄</div>
+    <div><div class="csm-label">Gap to close</div><div class="csm-text"><strong>Zero recurring revenue.</strong> Every job is a one-time transaction. No maintenance plan converting completed installs into monthly income.</div></div>
+  </div>
+</div>
+```
+
   </div>
 </section>
 
 <!-- ════════════════════════════════════════════
      FLYWHEEL
 ════════════════════════════════════════════ -->
+
 <section class="fw-section" id="flywheel">
   <div class="eyebrow reveal">02 — The System</div>
-  <h2 class="sh reveal">The GreenTree <em>Flywheel.</em></h2>
-  <p class="fw-sub reveal">Every piece feeds the next. The longer it runs, the more it produces — without increasing what you spend.</p>
+  <h2 class="sh reveal" style="font-size:clamp(3rem,5.5vw,5.5rem);">The GreenTree <em>Flywheel.</em></h2>
+  <p class="fw-sub reveal">Every piece feeds the next. The longer it runs, the more it produces — without increasing what you spend. This is not a marketing campaign. <strong style="color:rgba(255,255,255,.75);font-weight:500;">It's a machine.</strong></p>
 
   <div class="fw-grid reveal">
     <div class="fw-cell">
@@ -906,7 +919,7 @@ tr:nth-child(even) td { background: var(--off); }
     <div class="fw-cell">
       <div class="fw-num">05</div>
       <div class="fw-title">Review Auto-Requested</div>
-      <div class="fw-desc">The moment a job closes, an automated review request fires. 600 reviews becomes 1,000+. Google ranking climbs.</div>
+      <div class="fw-desc">The moment a job closes, an automated review request fires. 1,000 reviews becomes 1,500+. Google ranking climbs.</div>
     </div>
     <div class="fw-cell">
       <div class="fw-num">06</div>
@@ -933,6 +946,7 @@ tr:nth-child(even) td { background: var(--off); }
 <!-- ════════════════════════════════════════════
      DELIVERABLES
 ════════════════════════════════════════════ -->
+
 <section class="section white" id="deliverables">
   <div class="eyebrow reveal">03 — Deliverables</div>
   <h2 class="sh reveal">What we build<br><em>for GreenTree.</em></h2>
@@ -944,7 +958,7 @@ tr:nth-child(even) td { background: var(--off); }
         <div class="bc-title">Your brand, on camera.</div>
       </div>
       <div class="bc-body">
-        <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>12 short-form videos every month</strong> — 3 per week. Truck rolls, job sites, team moments, HVAC tips, before-and-afters. Built for homeowners who can afford a $20K Trane system</div></div>
+        <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>12 short-form videos every month</strong> — 3 per week. Truck rolls, job sites, team moments, HVAC tips, before-and-afters. Built for homeowners who can afford a $12K Trane system</div></div>
         <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>Monthly photography sessions</strong> — trucks, warehouse, team, finished installs, job sites. Assets that elevate your website, Google Business Profile, and ads permanently</div></div>
         <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>"Go Green & Breathe Clean" brand story</strong> told consistently — Instagram, Facebook, YouTube Shorts, TikTok, Google Business</div></div>
         <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>One shoot day = 12 pieces of content</strong> — AI-assisted editing, captions, hooks, and posting schedule all handled</div></div>
@@ -952,48 +966,52 @@ tr:nth-child(even) td { background: var(--off); }
       </div>
     </div>
 
-    <div class="build-card dark">
-      <div class="bc-head">
-        <div class="bc-tag">AI + Automation — Alberto</div>
-        <div class="bc-title">The system that never sleeps.</div>
-      </div>
-      <div class="bc-body">
-        <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>Custom AI voice agent 24/7</strong> — trained on GreenTree's services, pricing, and scripts. Qualifies leads, books jobs, captures details while you sleep. Nothing falls through.</div></div>
-        <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>Missed call text-back</strong> — anyone who slips past the AI gets an SMS in under 60 seconds. No lead left behind.</div></div>
-        <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>Automated review requests</strong> after every closed job — triggers directly from HouseCall Pro the moment a job is marked complete</div></div>
-        <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>6-touch follow-up on every estimate</strong> — the jobs that don't close today get a sequence that wins them back</div></div>
-        <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>Maintenance plan campaign</strong> targeting 9 years of past customers with timed, personalized outreach sequences</div></div>
-        <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>Full lead pipeline dashboard</strong> — one view showing every lead source, job, and conversion rate. Total clarity on what's working.</div></div>
-      </div>
-    </div>
+```
+<div class="build-card dark">
+  <div class="bc-head">
+    <div class="bc-tag">AI + Automation — Alberto</div>
+    <div class="bc-title">The system that never sleeps.</div>
+  </div>
+  <div class="bc-body">
+    <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>Custom AI voice agent 24/7</strong> — trained on GreenTree's services, pricing, and scripts. Qualifies leads, books jobs, captures details while you sleep. Nothing falls through.</div></div>
+    <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>Missed call text-back</strong> — anyone who slips past the AI gets an SMS in under 60 seconds. No lead left behind.</div></div>
+    <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>Automated review requests</strong> after every closed job — triggers directly from HouseCall Pro the moment a job is marked complete</div></div>
+    <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>6-touch follow-up on every estimate</strong> — the jobs that don't close today get a sequence that wins them back</div></div>
+    <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>Maintenance plan campaign</strong> targeting 9 years of past customers with timed, personalized outreach sequences</div></div>
+    <div class="bi"><div class="bi-dot">✓</div><div class="bi-t"><strong>Full lead pipeline dashboard</strong> — one view showing every lead source, job, and conversion rate. Total clarity on what's working.</div></div>
+  </div>
+</div>
 
-    <div class="tech-banner">
-      <div class="tb-icon">⚙️</div>
-      <div class="tb-text"><strong>Built custom. Built for GreenTree.</strong> Every piece of this system is built specifically for your business — not a white-labeled platform that any competitor can buy for $97/month. Custom AI voice agent trained on GreenTree's scripts and pricing. Custom SMS and follow-up workflows. Direct integration with HouseCall Pro so every booked job flows straight into your existing dispatch system. <strong>This is proprietary. Nobody else has it.</strong></div>
-    </div>
+<div class="tech-banner">
+  <div class="tb-icon">⚙️</div>
+  <div class="tb-text"><strong>Built custom. Built for GreenTree.</strong> Every piece of this system is built specifically for your business — not a white-labeled platform that any competitor can buy for $97/month. Custom AI voice agent trained on GreenTree's scripts and pricing. Custom SMS and follow-up workflows. Direct integration with HouseCall Pro so every booked job flows straight into your existing dispatch system. <strong>This is proprietary. Nobody else has it.</strong></div>
+</div>
+```
+
   </div>
 </section>
 
 <!-- ════════════════════════════════════════════
      NUMBERS
 ════════════════════════════════════════════ -->
+
 <section class="section off" id="numbers">
   <div class="eyebrow reveal">04 — The Numbers</div>
   <h2 class="sh reveal">More for less.<br><em>Starting month one.</em></h2>
 
   <div class="num-trio reveal">
     <div class="num-box">
-      <div class="nb-val">$7–13<em>K</em></div>
-      <div class="nb-lab">Current monthly spend</div>
-      <div class="nb-sub">Tools + SearchKings + scattered ad spend</div>
+      <div class="nb-val">$2,170<em>/mo</em></div>
+      <div class="nb-lab">Current monthly stack</div>
+      <div class="nb-sub">Podium + Zyratalk + SearchKings + HCP</div>
     </div>
     <div class="num-box accent">
-      <div class="nb-val">$7,500<em>/mo</em></div>
+      <div class="nb-val">$5,500<em>/mo</em></div>
       <div class="nb-lab">Full GreenTree system</div>
       <div class="nb-sub">Content + AI + automation — everything</div>
     </div>
     <div class="num-box">
-      <div class="nb-val">$20<em>K</em></div>
+      <div class="nb-val">$12<em>K</em></div>
       <div class="nb-lab">Avg install value</div>
       <div class="nb-sub">2 extra jobs/month pays for us 5× over</div>
     </div>
@@ -1005,12 +1023,12 @@ tr:nth-child(even) td { background: var(--off); }
       <tr><th>Tool</th><th>What You Pay Now</th><th>With This System</th><th>Result</th></tr>
     </thead>
     <tbody>
-      <tr><td>Podium</td><td>$700–$1,000/mo</td><td class="tg">Replaced by custom AI</td><td>~$800 saved</td></tr>
-      <tr><td>Zyratalk</td><td>$200–$300/mo</td><td class="tg">Replaced by custom AI voice</td><td>~$250 saved</td></tr>
-      <tr><td>HouseCall Pro</td><td>$400–$600/mo</td><td>Stays — field dispatch</td><td>—</td></tr>
-      <tr><td>SearchKings</td><td>$500–$1,500/mo mgmt</td><td class="tg">Reduce as organic grows</td><td>$500+ freed monthly</td></tr>
+      <tr><td>Podium (AI + phones)</td><td>$670/mo</td><td class="tg">Replaced by custom AI</td><td>$670 saved</td></tr>
+      <tr><td>Zyratalk</td><td>$500/mo</td><td class="tg">Replaced by custom AI voice</td><td>$500 saved</td></tr>
+      <tr><td>SearchKings</td><td>$300/mo</td><td class="tg">Reduce as organic grows</td><td>$300+ freed monthly</td></tr>
+      <tr><td>HouseCall Pro</td><td>~$700/mo</td><td>Stays — field dispatch</td><td>—</td></tr>
       <tr><td>Video content</td><td>$0 — gap</td><td class="tg">12 shorts + photography</td><td>Brand asset built monthly</td></tr>
-      <tr class="total-row"><td>Net investment</td><td>$7K–13K/mo scattered</td><td class="tg">$7,500/mo — all unified</td><td class="to">Everything working together</td></tr>
+      <tr class="total-row"><td>Current stack total</td><td>$2,170/mo</td><td class="tg">$5,500/mo — all unified</td><td class="to">Content + AI you never had</td></tr>
     </tbody>
   </table>
 
@@ -1045,12 +1063,108 @@ tr:nth-child(even) td { background: var(--off); }
 </section>
 
 <!-- ════════════════════════════════════════════
-     FUTURE
+     ROI
 ════════════════════════════════════════════ -->
+
+<section class="section white" id="roi">
+  <div class="eyebrow reveal">05 — Return on Investment</div>
+  <h2 class="sh reveal">The math is<br><em>straightforward.</em></h2>
+
+  <div style="margin-top:4rem;">
+
+```
+<!-- TOP ROI CARDS -->
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;" class="reveal">
+  <div style="padding:2.5rem 2rem;border-radius:12px;background:var(--pale);border:1.5px solid var(--mist);">
+    <div style="font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-bottom:.6rem;">One Install Pays For</div>
+    <div style="font-family:'Fraunces',serif;font-size:3.2rem;font-weight:200;color:var(--green);line-height:1;">2.6<span style="font-size:1.6rem;color:var(--mid);">mo</span></div>
+    <div style="font-size:.82rem;font-weight:300;color:var(--body);margin-top:.5rem;">One $12K Trane install covers 2.6 months of the full system</div>
+  </div>
+  <div style="padding:2.5rem 2rem;border-radius:12px;background:var(--green);border:1.5px solid transparent;">
+    <div style="font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);margin-bottom:.6rem;">Extra Jobs Needed / Month</div>
+    <div style="font-family:'Fraunces',serif;font-size:3.2rem;font-weight:200;color:#fff;line-height:1;">2<span style="font-size:1.6rem;color:var(--mist);"> jobs</span></div>
+    <div style="font-size:.82rem;font-weight:300;color:rgba(255,255,255,.5);margin-top:.5rem;">Just 2 extra installs per month = $24K in new revenue vs $5,500/month investment</div>
+  </div>
+  <div style="padding:2.5rem 2rem;border-radius:12px;background:var(--pale);border:1.5px solid var(--mist);">
+    <div style="font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-bottom:.6rem;">Year One ROI</div>
+    <div style="font-family:'Fraunces',serif;font-size:3.2rem;font-weight:200;color:var(--green);line-height:1;">5.3<span style="font-size:1.6rem;color:var(--mid);">×</span></div>
+    <div style="font-size:.82rem;font-weight:300;color:var(--body);margin-top:.5rem;">Conservative estimate based on 2 extra installs/month + reactivation campaign</div>
+  </div>
+</div>
+
+<!-- ROI BREAKDOWN TABLE -->
+<div style="margin-top:3rem;" class="reveal">
+  <div style="font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;color:var(--ink);margin-bottom:1rem;">Where the revenue comes from</div>
+  <table>
+    <thead>
+      <tr><th>Revenue Source</th><th>How It Works</th><th>Conservative Monthly</th><th>Annual</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>New installs from content</td><td>2 extra $12K jobs/mo from organic reach</td><td class="tg">$24,000</td><td class="tg">$288,000</td></tr>
+      <tr><td>Leads captured after hours</td><td>AI answers calls that previously went to voicemail</td><td class="tg">$12,000</td><td class="tg">$240,000</td></tr>
+      <tr><td>Past customer reactivation</td><td>9 years of data — even 1% converts to jobs</td><td class="tg">$15,000</td><td class="tg">$180,000</td></tr>
+      <tr><td>Estimate follow-up recovery</td><td>6-touch sequences recover lost quotes</td><td class="tg">$10,000</td><td class="tg">$120,000</td></tr>
+      <tr><td>Maintenance plan recurring</td><td>Converts installs into monthly recurring income</td><td class="tg">$5,000</td><td class="tg">$66,000</td></tr>
+      <tr class="total-row"><td>Total Conservative Upside</td><td>Based on 10 trucks, $12K avg install</td><td class="tg">$55,000/mo</td><td class="to">$660,000/yr</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- COST VS RETURN -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;" class="reveal">
+  <div style="padding:2rem 2.2rem;border-radius:12px;background:var(--gold-bg);border:1.5px solid var(--gold-bd);">
+    <div style="font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Your Total Annual Investment</div>
+    <div style="display:flex;flex-direction:column;gap:.6rem;">
+      <div style="display:flex;justify-content:space-between;font-size:.88rem;font-weight:300;color:var(--body);padding-bottom:.6rem;border-bottom:1px solid var(--gold-bd);">
+        <span>Setup fee (once)</span><span style="font-weight:600;color:var(--ink);">$15,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:.88rem;font-weight:300;color:var(--body);padding-bottom:.6rem;border-bottom:1px solid var(--gold-bd);">
+        <span>Monthly retainer × 12</span><span style="font-weight:600;color:var(--ink);">$5,500 × 12</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:1rem;font-weight:700;color:var(--gold);margin-top:.3rem;">
+        <span>Total Year One</span><span>$81,000</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:2rem 2.2rem;border-radius:12px;background:var(--pale);border:1.5px solid var(--mist);">
+    <div style="font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-bottom:1rem;">Conservative Revenue Added</div>
+    <div style="display:flex;flex-direction:column;gap:.6rem;">
+      <div style="display:flex;justify-content:space-between;font-size:.88rem;font-weight:300;color:var(--body);padding-bottom:.6rem;border-bottom:1px solid var(--mist);">
+        <span>New installs from content</span><span style="font-weight:600;color:var(--ink);">$288,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:.88rem;font-weight:300;color:var(--body);padding-bottom:.6rem;border-bottom:1px solid var(--mist);">
+        <span>After-hours + reactivation</span><span style="font-weight:600;color:var(--ink);">$420,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:.88rem;font-weight:300;color:var(--body);padding-bottom:.6rem;border-bottom:1px solid var(--mist);">
+        <span>Maintenance recurring</span><span style="font-weight:600;color:var(--ink);">$66,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:1rem;font-weight:700;color:var(--green);margin-top:.3rem;">
+        <span>Total Year One</span><span>$960,000+</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM LINE -->
+<div style="margin-top:1.5rem;padding:2rem 2.2rem;border-radius:12px;background:var(--green);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;" class="reveal">
+  <div>
+    <div style="font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);margin-bottom:.4rem;">The bottom line</div>
+    <div style="font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;color:#fff;line-height:1.3;">You invest <em style="color:var(--mist);font-style:normal;">$81,000</em> and we help you unlock <em style="color:var(--mist);font-style:normal;">$660,000+</em> in new revenue.<br>That's a <em style="color:var(--mist);font-style:normal;">8× return</em> in year one — conservatively.</div>
+  </div>
+  <div style="text-align:center;flex-shrink:0;">
+    <div style="font-family:'Fraunces',serif;font-size:4rem;font-weight:200;color:#fff;line-height:1;">8<span style="font-size:2rem;color:var(--mist);">×</span></div>
+    <div style="font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);">Year One ROI</div>
+  </div>
+</div>
+```
+
+  </div>
+</section>
 <section class="section pale" id="future">
   <div class="future-grid">
     <div class="reveal">
-      <div class="eyebrow">05 — Building for the Future</div>
+      <div class="eyebrow reveal">06 — Building for the Future</div>
       <h2 class="sh" style="margin-bottom:1.8rem;">A business that runs<br><em>like a business.</em></h2>
       <div class="future-body">
         <p>You've mentioned wanting GreenTree to be something bigger long-term — and we respect that. Our primary focus is immediate: <strong>full trucks, full schedules, a phone that never stops being answered.</strong></p>
@@ -1067,108 +1181,113 @@ tr:nth-child(even) td { background: var(--off); }
 <!-- ════════════════════════════════════════════
      PRICING
 ════════════════════════════════════════════ -->
+
 <section class="section white" id="pricing">
-  <div class="eyebrow reveal">06 — Investment</div>
-  <h2 class="sh reveal">One team. One system.<br><em>One number.</em></h2>
+  <div class="eyebrow reveal">07 — Investment</div>
+  <h2 class="sh reveal">Pay high once.<br><em>$5,500/month. Everything included.</em></h2>
   <div class="price-intro reveal">
-    <p>Everything below is month-to-month. No long-term contracts. We earn your trust every 30 days.</p>
+    <p>The setup fee is what it costs to build a custom AI system from scratch — trained on GreenTree's scripts, integrated with HouseCall Pro, and built to run without you. You pay it once. After that, <strong>$5,500 a month covers everything</strong> — content, photography, AI, automation, reporting. No surprises, no add-ons, no contracts.</p>
   </div>
 
-  <!-- WEBSITE OPTIMIZATION — ONE TIME -->
-  <div class="web-opt reveal">
-    <div class="wo-left">
-      <div class="wo-tag">Add-On — One Time Fee</div>
-      <div class="wo-title">Website Optimization</div>
-      <div class="wo-desc">Your website is the first thing a homeowner lands on after seeing your content or clicking your Google listing. Right now it's functional — but it's not converting the way it should. We do a full optimization: <strong>speed, SEO, conversion flow, booking form, Google Business sync, and mobile experience.</strong> Done once, works forever.</div>
-      <div class="wo-includes">
-        <span class="wo-tag-item">Page speed optimization</span>
-        <span class="wo-tag-item">Local SEO on-page</span>
-        <span class="wo-tag-item">Google Business sync</span>
-        <span class="wo-tag-item">Booking form overhaul</span>
-        <span class="wo-tag-item">Mobile experience</span>
-        <span class="wo-tag-item">CTA optimization</span>
-        <span class="wo-tag-item">Schema markup</span>
-      </div>
-    </div>
-    <div class="wo-right">
-      <div class="wo-price">$1,500<em></em></div>
-      <div class="wo-once">One-Time Fee</div>
-    </div>
-  </div>
+  <!-- MAIN PRICING BLOCK -->
 
-  <!-- MONTHLY TIERS -->
-  <div class="price-cards reveal">
-    <div class="pc">
-      <div class="pc-top">
-        <div class="pc-tag">AI Automation Only</div>
-        <div class="pc-name">The Machine</div>
-        <div class="pc-amt">$2,500<em>/mo</em></div>
-        <div class="pc-setup">$1,000 setup · month-to-month</div>
-      </div>
-      <div class="pc-body">
-        <div class="pf">AI voice agent 24/7</div>
-        <div class="pf">Missed call text-back</div>
-        <div class="pf">Automated review requests</div>
-        <div class="pf">Lead pipeline + dashboard</div>
-        <div class="pf">Past customer reactivation</div>
-        <div class="pf">Estimate follow-up sequences</div>
-      </div>
-      <div class="pc-foot"><a href="#cta" class="pc-btn">Get Started</a></div>
-    </div>
+  <div class="reveal" style="margin-top:2.5rem;">
 
-    <div class="pc star">
-      <div class="pc-top">
-        <div class="pc-badge">Recommended</div>
-        <div class="pc-tag">Full System</div>
-        <div class="pc-name">The GreenTree Flywheel</div>
-        <div class="pc-amt">$7,500<em>/mo</em></div>
-        <div class="pc-setup">$5,000 setup · month-to-month · no contracts</div>
+```
+<!-- SETUP CARD -->
+<div style="padding:3rem;border-radius:16px;background:var(--ink);margin-bottom:1.5rem;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;right:0;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(26,92,40,.3),transparent 70%);pointer-events:none;"></div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:2rem;position:relative;z-index:1;">
+    <div style="flex:1;min-width:280px;">
+      <div style="font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin-bottom:.8rem;">One-Time Setup Fee</div>
+      <div style="font-family:'Fraunces',serif;font-size:2rem;font-weight:300;color:#fff;margin-bottom:1rem;line-height:1.2;">We build the entire system.<br><em style="color:var(--sage);font-style:italic;">You own it forever.</em></div>
+      <div style="font-size:.88rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.5);max-width:480px;">This covers building a custom AI voice agent trained specifically on GreenTree — your services, your pricing, your tone. Full HouseCall Pro API integration. SMS and follow-up automation. Review request system. Maintenance campaign. Lead dashboard. Everything built from scratch, proprietary to GreenTree. No other HVAC company in South Florida has this.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;">
+        <span style="font-size:.72rem;padding:.3rem .85rem;border-radius:100px;background:rgba(90,175,114,.12);border:1px solid rgba(90,175,114,.25);color:var(--sage);">Custom AI voice agent</span>
+        <span style="font-size:.72rem;padding:.3rem .85rem;border-radius:100px;background:rgba(90,175,114,.12);border:1px solid rgba(90,175,114,.25);color:var(--sage);">HouseCall Pro integration</span>
+        <span style="font-size:.72rem;padding:.3rem .85rem;border-radius:100px;background:rgba(90,175,114,.12);border:1px solid rgba(90,175,114,.25);color:var(--sage);">SMS automation</span>
+        <span style="font-size:.72rem;padding:.3rem .85rem;border-radius:100px;background:rgba(90,175,114,.12);border:1px solid rgba(90,175,114,.25);color:var(--sage);">Review system</span>
+        <span style="font-size:.72rem;padding:.3rem .85rem;border-radius:100px;background:rgba(90,175,114,.12);border:1px solid rgba(90,175,114,.25);color:var(--sage);">Lead dashboard</span>
+        <span style="font-size:.72rem;padding:.3rem .85rem;border-radius:100px;background:rgba(90,175,114,.12);border:1px solid rgba(90,175,114,.25);color:var(--sage);">Maintenance campaign</span>
       </div>
-      <div class="pc-body">
-        <div class="pf">12 short-form videos monthly</div>
-        <div class="pf">Monthly photography sessions</div>
-        <div class="pf">Custom AI voice agent — trained on GreenTree</div>
-        <div class="pf">Replaces Podium + Zyratalk entirely</div>
-        <div class="pf">Automated review requests post-every job</div>
-        <div class="pf">Maintenance plan campaign</div>
-        <div class="pf">9 years of customer reactivation</div>
-        <div class="pf">Estimate follow-up sequences</div>
-        <div class="pf">Monthly reporting + full visibility</div>
-      </div>
-      <div class="pc-foot"><a href="#cta" class="pc-btn primary">Let's Build This</a></div>
     </div>
-
-    <div class="pc">
-      <div class="pc-top">
-        <div class="pc-tag">Content Only</div>
-        <div class="pc-name">The Brand Engine</div>
-        <div class="pc-amt">$4,500<em>/mo</em></div>
-        <div class="pc-setup">No setup fee · month-to-month</div>
-      </div>
-      <div class="pc-body">
-        <div class="pf">12 short-form videos per month</div>
-        <div class="pf">Monthly photography sessions</div>
-        <div class="pf">Brand storytelling + strategy</div>
-        <div class="pf">Multi-platform distribution</div>
-        <div class="pf">Hooks, captions, posting schedule</div>
-      </div>
-      <div class="pc-foot"><a href="#cta" class="pc-btn">Get Started</a></div>
+    <div style="text-align:center;flex-shrink:0;">
+      <div style="font-family:'Fraunces',serif;font-size:5rem;font-weight:200;color:#fff;line-height:1;">$15<span style="font-size:2.5rem;color:var(--sage);">K</span></div>
+      <div style="font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:.4rem;">Paid once. Done.</div>
     </div>
   </div>
+</div>
 
-  <div class="perf-box reveal">
-    <div class="pb-tag">Performance Option Available</div>
-    <div class="pb-text">Rather start lower and scale with results? <strong>$5,500/month base + $500 per install we can directly attribute to the system.</strong> If the flywheel works the way we know it will, you pay more because you're making more. Nobody loses — and you both have skin in the game.</div>
+<!-- MONTHLY CARD -->
+<div style="padding:3rem;border-radius:16px;background:var(--green);position:relative;overflow:hidden;">
+  <div style="position:absolute;bottom:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(0,0,0,.2),transparent 70%);pointer-events:none;"></div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:2rem;position:relative;z-index:1;">
+    <div style="flex:1;min-width:280px;">
+      <div style="font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);margin-bottom:.8rem;">Monthly Retainer — Everything Included</div>
+      <div style="font-family:'Fraunces',serif;font-size:2rem;font-weight:300;color:#fff;margin-bottom:1rem;line-height:1.2;">Content. AI. Automation.<br><em style="color:var(--mist);font-style:italic;">All of it. One number.</em></div>
+      <div style="font-size:.88rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.6);max-width:480px;">After setup, this is your single monthly investment — 12 short-form videos, monthly photography, AI running 24/7, all automations maintained, reporting delivered every month. No platform fees, no per-user charges, no surprises. Just results.</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:1.5rem;">
+        <div style="display:flex;gap:.6rem;align-items:flex-start;font-size:.84rem;font-weight:300;color:rgba(255,255,255,.65);">
+          <span style="color:var(--mist);font-weight:700;flex-shrink:0;">✓</span>12 short-form videos/month
+        </div>
+        <div style="display:flex;gap:.6rem;align-items:flex-start;font-size:.84rem;font-weight:300;color:rgba(255,255,255,.65);">
+          <span style="color:var(--mist);font-weight:700;flex-shrink:0;">✓</span>Monthly photography sessions
+        </div>
+        <div style="display:flex;gap:.6rem;align-items:flex-start;font-size:.84rem;font-weight:300;color:rgba(255,255,255,.65);">
+          <span style="color:var(--mist);font-weight:700;flex-shrink:0;">✓</span>AI voice agent 24/7
+        </div>
+        <div style="display:flex;gap:.6rem;align-items:flex-start;font-size:.84rem;font-weight:300;color:rgba(255,255,255,.65);">
+          <span style="color:var(--mist);font-weight:700;flex-shrink:0;">✓</span>Review automation
+        </div>
+        <div style="display:flex;gap:.6rem;align-items:flex-start;font-size:.84rem;font-weight:300;color:rgba(255,255,255,.65);">
+          <span style="color:var(--mist);font-weight:700;flex-shrink:0;">✓</span>Estimate follow-up sequences
+        </div>
+        <div style="display:flex;gap:.6rem;align-items:flex-start;font-size:.84rem;font-weight:300;color:rgba(255,255,255,.65);">
+          <span style="color:var(--mist);font-weight:700;flex-shrink:0;">✓</span>Past customer reactivation
+        </div>
+        <div style="display:flex;gap:.6rem;align-items:flex-start;font-size:.84rem;font-weight:300;color:rgba(255,255,255,.65);">
+          <span style="color:var(--mist);font-weight:700;flex-shrink:0;">✓</span>Maintenance plan campaign
+        </div>
+        <div style="display:flex;gap:.6rem;align-items:flex-start;font-size:.84rem;font-weight:300;color:rgba(255,255,255,.65);">
+          <span style="color:var(--mist);font-weight:700;flex-shrink:0;">✓</span>Monthly reporting dashboard
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;flex-shrink:0;">
+      <div style="font-family:'Fraunces',serif;font-size:5rem;font-weight:200;color:#fff;line-height:1;">$5.5<span style="font-size:2.5rem;color:var(--mist);">K</span></div>
+      <div style="font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:.4rem;">/month · No contracts</div>
+      <a href="https://buy.stripe.com/00w00jcpy86C8jo62I53O0M" style="display:inline-block;margin-top:1.5rem;padding:.9rem 2rem;border-radius:8px;background:#fff;color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .25s;">Get Started — Pay Now</a>
+      <div style="font-size:.7rem;color:rgba(255,255,255,.35);margin-top:.7rem;">$15,000 setup · then $5,500/month</div>
+    </div>
   </div>
+</div>
 
-  <p class="price-fn reveal">Month-to-month. No long-term contracts. We earn your trust every 30 days.</p>
+<!-- YEAR ONE SUMMARY -->
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:1.5rem;background:var(--border);border-radius:12px;overflow:hidden;">
+  <div style="padding:1.8rem;background:var(--off);text-align:center;">
+    <div style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;">Setup (once)</div>
+    <div style="font-family:'Fraunces',serif;font-size:2rem;font-weight:300;color:var(--ink);">$15,000</div>
+  </div>
+  <div style="padding:1.8rem;background:var(--off);text-align:center;">
+    <div style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;">Monthly × 12</div>
+    <div style="font-family:'Fraunces',serif;font-size:2rem;font-weight:300;color:var(--ink);">$66,000</div>
+  </div>
+  <div style="padding:1.8rem;background:var(--pale);text-align:center;">
+    <div style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem;">Total Year One</div>
+    <div style="font-family:'Fraunces',serif;font-size:2rem;font-weight:300;color:var(--green);">$81,000</div>
+  </div>
+</div>
+```
+
+  <p class="price-fn reveal" style="margin-top:1.2rem;">Month-to-month after setup. No long-term contracts. We earn your trust every 30 days.</p>
 </section>
 
 <!-- ════════════════════════════════════════════
      TIMELINE
 ════════════════════════════════════════════ -->
+
 <section class="section off" id="timeline">
-  <div class="eyebrow reveal">07 — Launch Plan</div>
+  <div class="eyebrow reveal">08 — Launch Plan</div>
   <h2 class="sh reveal">Up and running<br><em>in 30 days.</em></h2>
 
   <div class="tl-row reveal">
@@ -1208,6 +1327,7 @@ tr:nth-child(even) td { background: var(--off); }
 <!-- ════════════════════════════════════════════
      CTA
 ════════════════════════════════════════════ -->
+
 <section class="cta" id="cta">
   <div class="cta-ey">Ready when you are</div>
   <h2 class="cta-h">Let's fill<br>the <em>schedule.</em></h2>
@@ -1227,9 +1347,11 @@ tr:nth-child(even) td { background: var(--off); }
   </div>
 
   <div class="cta-btns">
-    <a href="https://wa.me/14386307806?text=Hey%20Dani%2C%20ready%20to%20talk%20about%20the%20GreenTree%20Flywheel" class="cta-btn p">WhatsApp Dani</a>
+    <a href="https://buy.stripe.com/00w00jcpy86C8jo62I53O0M" class="cta-btn p">Get Started — Pay Now</a>
+    <a href="https://wa.me/14386307806?text=Hey%20Dani%2C%20ready%20to%20talk%20about%20the%20GreenTree%20Flywheel" class="cta-btn o">WhatsApp Dani</a>
     <a href="https://wa.me/17863900074?text=Hey%20Alberto%2C%20ready%20to%20talk%20about%20the%20GreenTree%20Flywheel" class="cta-btn o">WhatsApp Alberto</a>
   </div>
+  <p style="margin-top:1.2rem;font-size:.78rem;color:rgba(255,255,255,.3);position:relative;z-index:1;">$15,000 setup · then $5,500/month · cancel anytime</p>
 
   <div class="cta-foot">
     DR&amp;AV · Content + AI Systems · greentreeac.com · Proposal valid 30 days
@@ -1247,5 +1369,6 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
+
 </body>
 </html>
